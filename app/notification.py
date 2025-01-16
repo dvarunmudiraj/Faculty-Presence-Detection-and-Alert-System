@@ -2,10 +2,10 @@ import requests
 
 # Function to send Telegram notifications
 def send_telegram_notification(message):
-    bot_token = "7668588130:AAGVDR6rgCEwgfBe67T-9AX1ATAV2fSGlIs"  # Replace with your bot token
-    chat_id = "1953281261"  # Replace with your chat ID
+    bot_token = "your-telegram-bot-token"  # Replace with your bot token
+    chat_id = "chatid"  # Replace with your chat ID
     
-    url = f"https://api.telegram.org/bot7668588130:AAGVDR6rgCEwgfBe67T-9AX1ATAV2fSGlIs/sendMessage"
+    url = f"https://api.telegram.org/your-telegram-bot-token/sendMessage"
     payload = {
         "chat_id": chat_id,
         "text": message
