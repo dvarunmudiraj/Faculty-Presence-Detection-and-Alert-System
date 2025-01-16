@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Monitoring System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=1">
+</head>
+<body>
+    <div class="banner">
+        <video autoplay loop muted plays-inline>
+            <source src="{{ url_for('static', filename='videos/v1.mp4') }}" type="video/mp4">
+        </video>
+    <!-- Navbar -->
+    <div class="navbar">
+        <img class="logo" src="{{ url_for('static', filename='videos/logo.png') }}?v=1" alt="Logo">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/start-monitoring">Start Monitoring</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1>Welcome to Faculty Monitoring System</h1>
+            <p>Ensure consistent monitoring of faculty presence with our advanced system.</p>
+            {% if monitoring_active %}
+                <a href="{{ url_for('stop_monitoring') }}" class="btn stop-btn">Stop Monitoring</a>
+                <p>Monitoring is active.</p>
+            {% else %}
+                <a href="{{ url_for('start_monitoring') }}" class="start-btn">Start Now</a>
+                <p>Monitoring is inactive.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="cards">
+        <div class="card">
+            <h3>Real-Time Monitoring</h3>
+            <p>Track faculty presence with live video detection and instant alerts.</p>
+        </div>
+        <div class="card">
+            <h3>Alert System</h3>
+            <p>Get notified instantly when the faculty is absent for a prolonged period.</p>
+        </div>
+        <div class="card">
+            <h3>Easy Setup</h3>
+            <p>Seamless integration with a user-friendly interface for effortless operation.</p>
+        </div>
+    </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Faculty Monitoring System. All rights reserved.<a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></p>
+
+    </footer>
+</body>
+</html>

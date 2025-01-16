@@ -1,0 +1,199 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/* Ensure full viewport height for html and body */
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Banner section */
+.banner {
+    width: 100%;
+    height: 100vh; /* Ensure it covers full viewport height */
+    position: relative;
+    background-image: linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.40));
+    background-position: center;
+    background-size: cover;
+}
+
+/* Video background settings */
+.banner video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the banner */
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Navbar styling */
+.navbar {
+    width: 90%;
+    padding: 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 160px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    padding: 15px;
+}
+
+li a:hover {
+    background: white;
+    transition: 0.6s;
+}
+
+.navbar a:hover {
+    color: black;
+}
+
+/* Hero section */
+.hero {
+    width: 100%;
+    position: absolute;
+    top: 50%; /* Center the content vertically */
+    transform: translateY(-50%); /* Adjust the exact vertical centering */
+    text-align: center;
+    z-index: 1;
+}
+
+/* Hero content (text on top of the background) */
+.hero-content {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin: 0 0 20px 0;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin: 0 0 30px 0;
+}
+
+.hero-content a {
+    display: inline-block;
+    background-color: #ff4500;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.hero-content a:hover {
+    background-color: #ff6347;
+}
+
+/* Cards Section */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 5px 100px; /* Add some space from the top */
+    margin-top: 50vh; /* Ensure it starts after the hero section */
+}
+
+.card {
+    background: #ffffff;
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Start button styles */
+.start-btn {
+    background-color: #1e90ff;
+}
+
+.start-btn:hover {
+    background-color: #00c6ff;
+}
+
+/* Stop button styles */
+.stop-btn {
+    background-color: #ff4500;
+    margin-top: 20px;
+}
+
+.stop-btn:hover {
+    background-color: #ff6347;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
